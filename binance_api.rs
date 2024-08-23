@@ -314,7 +314,7 @@ pub mod binance_api {
             };
             let mut param_map = std::collections::HashMap::new();
             param_map.insert("symbol".to_string(), symbol.to_string());
-            if all {
+            if !all {
                 param_map.insert("orderId".to_string(), order_id.to_string());
             }
             let parsed = self
